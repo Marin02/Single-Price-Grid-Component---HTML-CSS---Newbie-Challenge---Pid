@@ -1,0 +1,202 @@
+/* Font Family Karla
+Weight 400, 700 */
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+/* Variable Colors */
+:root {
+    --Cyan: hsl(179, 62%, 43%);
+    --BrightYellow: hsl(71, 73%, 54%);
+    --LightGray: hsl(204, 43%, 93%);
+    --GrayishBlue: hsl(218, 22%, 67%);
+    --FontKarla: 'Karla', sans-serif; 
+}
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--LightGray);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    font-family: var(--FontKarla);
+}
+
+
+/* -Section Community- (first) */
+.community {
+    height: 14rem;
+    width: 41rem;
+    background-color: white;
+    padding: 20px;
+    margin: auto;
+    display: block;
+    position: relative;
+    border-radius: 10px 10px 0 0;
+}
+
+.community-details {
+    padding: 20px;
+}
+
+.community-details > .community__title {
+    color: var(--Cyan);
+    filter: contrast(1);
+}
+
+.community-details > .community__subtitle {
+    margin: 25px 0;
+    color: var(--BrightYellow);
+}
+
+.community-details > .community__description {
+    color: gray;
+    line-height: 1.5rem;
+    margin-top: -12px;
+    
+}
+
+section.subscription-why-us {
+    height: 16rem;
+    width: 41rem;
+    background-color: transparent;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    border-radius: 0 0 10px 10px;
+    position: relative;
+}
+
+/* -Section Subscription- (second) */
+.subscription {
+    height: 16rem;
+    width: 20.5rem;
+    background-color: var(--Cyan);
+    padding: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 0 0 0 10px;
+}
+
+.subscription-details {
+    padding: 10px;
+}
+
+.subscription-details > .subscription__title {
+    color: white;
+}
+
+.subscription-details > .subscription__price {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 20px;
+    position: relative;
+}
+
+.subscription__price::after {
+    content: "per month";
+    position: absolute;
+    color: var(--LightGray);
+    font-size: 16px;
+    text-align: center;
+    margin: 10px 15px;
+    font-weight: 400;
+}
+
+.subscription-details > .subscription__price-description {
+    color: white;
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+.subscription-details > .subscription__button {
+    color: white;
+    background-color: var(--BrightYellow);
+    margin-top: 30px;
+    padding: 15px;
+    width: 95%;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    box-shadow: 6px 6px 7px rgb(78, 78, 78);
+    cursor: pointer;
+    transition: 350ms ease all;
+}
+
+.subscription__button:hover {
+    transform: scale(1.10) rotate(1deg);
+}
+
+/* -Section Why us- (third) */
+.why-us {
+    height: 16rem;
+    width: 20.5rem;
+    background-color: rgba(5, 157, 245, 0.678);
+    padding: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 0 0 10px 0;
+}
+
+.why-us-details {
+    padding: 10px;
+}
+
+.why-us-details > .why-us__title {
+    color: white;
+}
+
+.why-us-details > .why-us__description {
+    color: var(--LightGray);
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+/*
+-------- Media Queries Section -----------
+*/
+
+/* For mobile (width: 500px) */
+@media only screen and (max-width: 500px) {
+    body {
+        height: unset;
+    }
+
+    .container {
+        margin-top: 4rem;
+    }
+
+    .community {
+        width: 20.5rem;
+        height: 21rem;
+    }
+
+    section.subscription-why-us {
+        width: 20.5rem;
+        height: 32rem;
+        position: relative;
+    }
+
+    .subscription {
+        border-radius: 0 0 0 0;
+    }
+
+    .why-us {
+        margin-top: 16rem;
+        opacity: 1;
+        border-radius: 0 0 10px 10px;
+    }
+} 
+
